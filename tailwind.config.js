@@ -4,7 +4,11 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        lightCream: "#fcf8f5"
+        lightCream: "#fcf8f5",
+        customRed: "#c8480c"
+      },
+      fontFamily: {
+        custom: ["RedHat"]
       }
     },
   },
