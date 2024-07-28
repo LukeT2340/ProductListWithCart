@@ -1,7 +1,11 @@
 import CartProps from "../interfaces/CartProps"
 import CartItem from "./CartItem"
+import { useState } from "react"
+import ConfirmOrderModal from "./ConfirmOrderModal"
 
 const Cart: React.FC<CartProps>= ({ products, setProducts }) => {
+    const [showConfirmOrderModal, setConfirmOrderModal] = useState(false)
+
     // Calculate total items in cart
     const totalItems = products.reduce((totalItems, product) => {
         return totalItems + product.amount
@@ -30,7 +34,7 @@ const Cart: React.FC<CartProps>= ({ products, setProducts }) => {
                         <img src="/assets/images/icon-carbon-neutral.svg" alt="carbon neutral icon" />
                         <p className="text-[14px]">This is a <span className="font-semibold">carbon-neutral</span> delivery</p>
                     </div>
-                    <button className="flex bg-customRed rounded-full text-white justify-center px-[24px] py-[16px] font-semibold text-[16px]">
+                    <button onClick={() => setConfirmOrderModal(true)} className="flex bg-customRed rounded-full text-white justify-center px-[24px] py-[16px] font-semibold text-[16px]">
                         Confirm Order
                     </button>
                 </>
@@ -40,6 +44,7 @@ const Cart: React.FC<CartProps>= ({ products, setProducts }) => {
                     <p className="text-[14px] text-lightBrown font-semibold">Your added items appear here</p>
                 </div>
             )}
+            <ConfirmOrderModal showing={showConfirmOrderModal} products={products} />
         </div>
     )
 }
