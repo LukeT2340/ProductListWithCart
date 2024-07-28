@@ -28,7 +28,7 @@ const ProductPreview: React.FC<ProductPreviewProps> = ({ product, isSelected, se
     return (
         <div className='flex flex-col font-RedHat'>
             <div className='relative flex justify-center items-center'>
-                <img className="rounded-[8px] z-1 mb-[22px]" src={`/assets/images/image-${product.imageName}-desktop.jpg`} alt={product.shortTitle} />
+                <img className={`rounded-[8px] z-1 mb-[22px] ${product.amount > 0 ? 'border-2 border-customRed' : ''}`} src={`/assets/images/image-${product.imageName}-desktop.jpg`} alt={product.shortTitle} />
                 {isSelected ? (
                     <div className='px-5 flex z-2 items-center justify-between absolute bottom-0 bg-red-600 w-[160px] rounded-full h-[44px]'>
                         <button onClick={() => handleDecrementProductAmount(product)} className="flex justify-center items-center border w-[20px] h-[20px] border-white rounded-full">
