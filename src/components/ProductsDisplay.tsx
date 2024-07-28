@@ -1,10 +1,7 @@
-import productsList from '../ProductsList'
 import ProductPreview from './ProductPreview'
-import { useState } from 'react'
+import ProductDisplayProps from '../interfaces/ProductDisplayProps'
 
-function ProductsDisplay() {
-    const [products, setProducts] = useState(productsList);
-
+const ProductsDisplay: React.FC<ProductDisplayProps> = ({ products, setProducts}) => {
     // Check if a product is selected based on longTitle
     const isProductSelected = (productLongTitle: string) => {
         return products.some(product => product.longTitle === productLongTitle && product.amount > 0)

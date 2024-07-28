@@ -5,7 +5,8 @@ module.exports = {
     extend: {
       colors: {
         lightCream: "#fcf8f5",
-        customRed: "#c8480c"
+        customRed: "#c8480c",
+        customRose: "#ad8a85"
       },
       fontFamily: {
         custom: ["RedHat"]
