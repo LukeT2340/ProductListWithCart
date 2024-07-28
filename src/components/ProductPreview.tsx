@@ -20,7 +20,7 @@ const ProductPreview: React.FC<ProductPreviewProps> = ({ product, isSelected, se
                 {isSelected ? (
                     <div className='px-5 flex z-2 absolute bottom-0 bg-red-600 w-[160px] rounded-[999px] h-[44px]'>
                         <button>
-                            <img src="/assets/images/icon-decrement-quantity.svg"></img>
+                            <img src="/assets/images/icon-decrement-quantity.svg" alt="remove item icon"></img>
                         </button>
                         <p></p>
                         <button>
@@ -29,7 +29,7 @@ const ProductPreview: React.FC<ProductPreviewProps> = ({ product, isSelected, se
                     </div>
                 ) : (
                     <button onClick={() => handleAddToCartClicked(product)} className='gap-1 flex z-2 absolute border-rose-900 border-[1px] bottom-0 bg-white w-[160px] rounded-[999px] h-[44px] justify-center items-center'>
-                        <img src="/assets/images/icon-add-to-cart.svg"></img>
+                        <img src="/assets/images/icon-add-to-cart.svg" alt="Add item to cart icon"></img>
                         <p className='font-semibold text-[14px]'>Add to Cart</p>
                     </button>
                 )}
