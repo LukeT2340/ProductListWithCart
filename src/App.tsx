@@ -8,13 +8,9 @@ function App() {
   const [products, setProducts] = useState(productsList);
 
   return (
-    <div className="flex flex-row justify-center bg-lightCream p-[88px] gap-[32px]">
-      <div className='flex flex-col w-[800px]'>
-        <ProductsDisplay products={products} setProducts={setProducts} />
-      </div>
-      <div className='w-[384px]'>
-        <Cart products={products} setProducts={setProducts} />
-      </div>
+    <div className="flex lg:flex-row flex-col items-center lg:items-start justify-center bg-lightCream lg:p-[88px] gap-[32px] md:p-[40px] lg:p-[88px]">
+      <ProductsDisplay products={products} setProducts={setProducts} />
+      <Cart products={products} setProducts={setProducts} />
     </div>
   )
 }

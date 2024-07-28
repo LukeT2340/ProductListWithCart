@@ -13,7 +13,7 @@ const Cart: React.FC<CartProps>= ({ products, setProducts }) => {
     }, 0)
 
     return (
-        <div className="flex flex-col font-RedHat bg-white w-[384px] rounded-[12px] text-left p-[24px] gap-[24px]">
+        <div className="flex flex-col font-RedHat bg-white rounded-[12px] text-left p-[24px] gap-[24px] w-full lg:w-[384px]">
             <h1 className="text-[24px] font-bold text-customRed">You Cart ({totalItems})</h1>
             {totalItems > 0 ? (
                 <>
@@ -36,7 +36,7 @@ const Cart: React.FC<CartProps>= ({ products, setProducts }) => {
                 </>
             ) : (
                 <div className="flex flex-col items-center">
-                    <img src="/assets/images/illustration-empty-cart.svg" />
+                    <img src="/assets/images/illustration-empty-cart.svg" alt="empty cart illustration" />
                     <p className="text-[14px] text-lightBrown font-semibold">Your added items appear here</p>
                 </div>
             )}
