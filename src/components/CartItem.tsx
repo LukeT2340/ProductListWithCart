@@ -1,6 +1,13 @@
 import CartItemInterface from "../interfaces/CartItemInterface"
 
-const CartItem: React.FC<CartItemInterface> = ({ product }) => {
+const CartItem: React.FC<CartItemInterface> = ({ product, setProducts }) => {
+    // Remove item from cart
+    const removeItem = () => {
+        setProducts(prevProducts => prevProducts.map((p) => (
+            p.longTitle === product.longTitle ? { ...p, amount: 0 } : p
+        )))
+    }
+
     return (
         <>
             <div className="flex flex-row justify-between items-center">
@@ -11,11 +18,11 @@ const CartItem: React.FC<CartItemInterface> = ({ product }) => {
                         <p className="text-customRose">@ ${product.price.toFixed(2)}</p>
                     </div>
                 </div>
-                <div className="flex justify-center items-center rounded-full w-[18px] h-[18px] border border-customRose">
+                <button onClick={() => removeItem()} className="flex justify-center items-center rounded-full w-[18px] h-[18px] border border-customRose">
                     <img src="/assets/images/icon-remove-item.svg" alt="remove item icon" />
-                </div>
+                </button>
             </div>
-            <div className="w-full h-[0.2px] bg-rose-100 my-[24px]"/>
+            <div className="w-full h-[0.2px] bg-rose-100"/>
         </>
     )
 }

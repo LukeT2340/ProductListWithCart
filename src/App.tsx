@@ -13,7 +13,7 @@ function App() {
         <ProductsDisplay products={products} setProducts={setProducts} />
       </div>
       <div className='w-[384px]'>
-        <Cart products={products} />
+        <Cart products={products} setProducts={setProducts} />
       </div>
     </div>
   )
