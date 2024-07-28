@@ -25,7 +25,7 @@ const Cart: React.FC<CartProps>= ({ products, setProducts }) => {
                 <p className="text-[24px] font-bold">${totalPrice.toFixed(2)}</p>
             </div>
             <div className="bg-lightCream flex flex-row justify-center items-center rounded-[8px] p-[16px] gap-[8px]">
-                <img src="/assets/images/icon-carbon-neutral.svg" />
+                <img src="/assets/images/icon-carbon-neutral.svg" alt="carbon neutral icon" />
                 <p className="text-[14px]">This is a <span className="font-semibold">carbon-neutral</span> delivery</p>
             </div>
             <button className="flex bg-customRed rounded-full text-white justify-center px-[24px] py-[16px] font-semibold text-[16px]">
