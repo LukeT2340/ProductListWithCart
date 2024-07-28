@@ -6,7 +6,8 @@ module.exports = {
       colors: {
         lightCream: "#fcf8f5",
         customRed: "#c8480c",
-        customRose: "#ad8a85"
+        customRose: "#ad8a85",
+        lightBrown: "#87635a"
       },
       fontFamily: {
         custom: ["RedHat"]

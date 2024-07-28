@@ -16,6 +16,7 @@ const CartItem: React.FC<CartItemInterface> = ({ product, setProducts }) => {
                     <div className="flex flex-row items-center gap-[8px]">
                         <p className="text-rose-600 font-semibold text-[14px]">{product.amount}x</p>
                         <p className="text-customRose">@ ${product.price.toFixed(2)}</p>
+                        <p className="text-lightBrown text-[14px] font-semibold">${(product.price * product.amount).toFixed(2)}</p>
                     </div>
                 </div>
                 <button onClick={() => removeItem()} className="flex justify-center items-center rounded-full w-[18px] h-[18px] border border-customRose">

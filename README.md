@@ -1,5 +1,7 @@
 # Product list with cart challenge (frontendmentor.io)
 
+Desktop page completed (still not responsive on smaller devices)
+
 I'm using frontend mentor to practice my tailwind, javascript, typescript and HTML skills. I know some of the colors are currently off. I'm using the colors specified in the figma file, but they don't look the same as in the preview for some reason. Will fix in the future. Using a desktop-first approach, so app is still not responsive.
 
 You can find the challenge here: 
