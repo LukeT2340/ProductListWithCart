@@ -12,5 +12,4 @@ const productsList = [
     new Product("Vanilla Panna Cotta", "Panna Cotta", 6.50, "panna-cotta", 0)
 ]
 
-// Add this line to make the file a module
 export default productsList;
